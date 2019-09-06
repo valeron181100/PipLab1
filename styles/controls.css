@@ -1,0 +1,124 @@
+.subDefFont{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;   
+}
+
+.radioButton{
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.radioButton::before{
+    content: '';
+    display: inline-flex;
+    width: 23px;
+    height: 23px;
+    margin-right: 5px;
+    border: solid 2px black;
+    border-radius: 25px;
+}
+
+input[type='radio']{
+    display: none;
+}
+
+input[type='radio']:checked + .radioButton::before{
+    background:radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 43%, rgba(255,255,255,1) 44%, rgba(255,255,255,1) 100%);
+}
+input[type='radio']:hover + .radioButton::before{
+    border: solid 2px rgb(62, 81, 255);
+}
+
+
+/* Text input */
+
+input[type='text'], textarea{
+    display: inline-flex;
+    height: 2rem;
+    font-size: 1.2rem;
+    font-family: var(--default-font);
+    font-weight: 400;
+    padding: 0px 0.7rem 0px 0.7rem;
+    border: solid 2px black;
+    background: none;
+    margin-top: 7px;
+}
+
+input[type='text']:focus, textarea:focus{
+    background: white;
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: rgb(126, 157, 199);
+}
+
+/* Select input */
+
+select{
+    display: none
+}
+
+.fluentSelect label{
+    width: 20rem;
+    height: 2rem;
+    display: inline-flex;  
+    justify-content: space-between;
+    /* align-items: center; */
+    border: solid 2px black;
+}
+
+.fluentSelect label img{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.optionPanel{
+    width: 20rem;
+    height: 10.1rem;
+    overflow: auto;
+    position: absolute;
+    left: inherit;
+    z-index: 100;
+    
+}
+
+.divOption{
+    height: 2rem;
+    background: rgb(184, 204, 216);
+    padding-left: 15px; 
+}
+
+.divOption:hover{
+    background: rgb(159, 176, 185);
+}
+
+/* Button */
+
+.fluentButton{
+    width: 10rem;
+    height: 3rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(207, 207, 207);
+}
+
+.fluentButton:hover{
+    outline-width: 2px;
+    outline-color: black;
+    outline-style: solid;
+}
+
+input[type='submit']{
+    display: none;
+}
+
+/* Text area */
+
+textarea{
+    width: 25rem;
+    height: 10rem;
+    display: block;
+}

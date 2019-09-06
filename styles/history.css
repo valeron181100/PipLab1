@@ -1,0 +1,72 @@
+#history{
+    box-shadow: inset 1px 50px 80px -57px rgba(0,0,0,0.49);
+    height: 300px;
+    display: flex;
+    align-items: center;
+    width: inherit;
+    background: rgba(113, 149, 175, 0.705);
+}  
+
+#history > .historyName{
+    height: 300px;
+    width: 300px;
+    background: rgb(189, 189, 189);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 36px 0px 76px -36px rgba(0,0,0,0.75);
+}
+
+#historyContent{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    overflow: auto;
+}
+
+#historyContent > li{
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background: radial-gradient(ellipse at center, rgba(241,235,255,1) 0%, rgb(160, 178, 206) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 42px -3px rgba(0,0,0,0.4);
+}
+
+
+
+.empty-history{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    top: inherit;
+    left: inherit;
+    margin-left: 45%;
+    margin-top: -1%;
+    /* margin-righ: 50%; */
+}
+
+.empty-history span{
+    display: block;
+    font-size: 30px;
+    font-family: var(--default-font);
+    white-space: nowrap;
+}
+
+.empty-history img{
+    width: 15vh;
+}
+
+@media only screen and (max-width: 560px){
+    #history > .historyName{
+        display: none;
+    }
+}
